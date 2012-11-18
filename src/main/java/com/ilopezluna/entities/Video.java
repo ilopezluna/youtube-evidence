@@ -23,5 +23,6 @@ public class Video {
     @Validate("required")
     public Date date;
 
+    @Validate("required")
     public String email;
 }
