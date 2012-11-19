@@ -1,6 +1,12 @@
-<html t:type="layout" title="list videos"
+<html t:type="layout" title="Listing videos"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
-<t:grid source="videos"/>
+<ul>
+    <t:loop source="videos" value="video">
+        <li>
+            <t:videoembedder video="video"></t:videoembedder>
+        </li>
+    </t:loop>
+</ul>
 
 </html>
