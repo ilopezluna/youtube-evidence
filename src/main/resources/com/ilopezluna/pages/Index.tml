@@ -8,23 +8,8 @@
 
     <p>The current time is: <strong>${currentTime}</strong></p>
 
-    <!-- A Zone is a component that can be updated in place, triggered by other components. -->
-    <t:zone t:id="zone">
-        <p>
-            You have clicked the link <strong>${clickCount}</strong> times.
-        </p>
-
-        <p>
-            [
-            <t:actionlink t:id="increment">increment</t:actionlink>
-            ]
-            &nbsp;
-            [
-            <t:actionlink t:id="incrementAjax" zone="^">increment (via Ajax)</t:actionlink>
-            ]
-        </p>
-
-    </t:zone>
+    <p><t:pagelink page="video/createvideo">Create video</t:pagelink></p>
+    <p><t:pagelink page="video/listvideo">List videos</t:pagelink></p>
 
     <p:sidebar>
         <p>

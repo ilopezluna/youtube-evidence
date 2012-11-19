@@ -1,4 +1,4 @@
-<html t:type="layout" title="Create New Address"
+<html t:type="layout" title="Create New Video"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
 <t:beaneditform object="video"/>
