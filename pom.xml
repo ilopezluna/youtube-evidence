@@ -78,6 +78,12 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.got5</groupId>
+            <artifactId>tapestry5-jquery</artifactId>
+            <version>${tapestry-jquery-version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>youtube-evidence</finalName>
@@ -137,6 +143,18 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             <id>apache-staging</id>
             <url>https://repository.apache.org/content/groups/staging/</url>
         </repository>
+
+        <!-- This repository is only by tapestry-jquery -->
+        <repository>
+            <id>devlab722-repo</id>
+            <url>
+                http://nexus.devlab722.net/nexus/content/repositories/releases
+            </url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
     </repositories>
 
     <properties>
@@ -147,5 +165,6 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         <testng-release-version>5.14.10</testng-release-version>
         <easymock-release-version>3.0</easymock-release-version>
         <mysql-connector-version>5.1.21</mysql-connector-version>
+        <tapestry-jquery-version>3.3.4</tapestry-jquery-version>
     </properties>
 </project>
