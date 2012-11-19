@@ -2,6 +2,7 @@ package com.ilopezluna.pages.video;
 
 import com.ilopezluna.entities.Video;
 import com.ilopezluna.pages.Index;
+import com.ilopezluna.services.VideoDAO;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.hibernate.annotations.CommitAfter;
@@ -18,7 +19,7 @@ import org.hibernate.Session;
 public class CreateVideo {
 
     @Inject
-    private Session session;
+    private VideoDAO videoDAO;
 
     @InjectPage
     private ListVideo listVideo;
@@ -26,10 +27,8 @@ public class CreateVideo {
     @Property
     private Video video;
 
-    @CommitAfter
-    Object onSuccess()
-    {
-        session.persist(video);
+    Object onSuccess() {
+        videoDAO.add(video);
         return listVideo;
     }
 }

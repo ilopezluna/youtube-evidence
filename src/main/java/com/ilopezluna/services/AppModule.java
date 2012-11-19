@@ -1,12 +1,17 @@
 package com.ilopezluna.services;
 
 import java.io.IOException;
+import java.math.BigInteger;
+import java.security.SecureRandom;
 
 import org.apache.tapestry5.*;
+import org.apache.tapestry5.hibernate.HibernateTransactionAdvisor;
 import org.apache.tapestry5.ioc.MappedConfiguration;
+import org.apache.tapestry5.ioc.MethodAdviceReceiver;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Local;
+import org.apache.tapestry5.ioc.annotations.Match;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestFilter;
 import org.apache.tapestry5.services.RequestHandler;
@@ -21,12 +26,7 @@ public class AppModule
 {
     public static void bind(ServiceBinder binder)
     {
-        // binder.bind(MyServiceInterface.class, MyServiceImpl.class);
-
-        // Make bind() calls on the binder object to define most IoC services.
-        // Use service builder methods (example below) when the implementation
-        // is provided inline, or requires more initialization than simply
-        // invoking the constructor.
+        binder.bind(VideoDAO.class);
     }
 
     public static void contributeFactoryDefaults(
@@ -50,6 +50,9 @@ public class AppModule
         // you can extend this list of locales (it's a comma separated series of locale names;
         // the first locale name is the default when there's no reasonable match).
         configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en");
+        // Set a random HMAC key for form signing (not cluster safe)
+        configuration.add(SymbolConstants.HMAC_PASSPHRASE,
+                new BigInteger(130, new SecureRandom()).toString(32));
     }
 
 
@@ -113,5 +116,11 @@ public class AppModule
         // within the pipeline.
 
         configuration.add("Timing", filter);
+    }
+
+    @Match("*DAO")
+    public static void adviseTransactions(HibernateTransactionAdvisor advisor, MethodAdviceReceiver receiver)
+    {
+        advisor.addTransactionCommitAdvice(receiver);
     }
 }

@@ -20,9 +20,11 @@ public class Video {
     @Validate("required")
     public String url;
 
-    @Validate("required")
     public Date date;
 
-    @Validate("required")
+    public String city;
+
+    public String street;
+
     public String email;
 }
