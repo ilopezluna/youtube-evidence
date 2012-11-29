@@ -9,7 +9,12 @@ import org.apache.tapestry5.SymbolConstants;
 /**
  * Layout component for pages of application youtube-evidence.
  */
-@Import(stylesheet = "context:layout/layout.css")
+@Import(stylesheet =
+        {
+            "context:layout/layout.css",
+            "context:styles/youtube-evidence.css"
+        }
+)
 public class Layout
 {
     /**

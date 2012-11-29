@@ -1,7 +1,7 @@
 <html t:type="layout" title="Listing videos"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
-<ul>
+<ul class="video-list">
     <t:loop source="videos" value="video">
         <li>
             <t:videoembedder video="video"></t:videoembedder>

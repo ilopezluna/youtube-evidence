@@ -1,1 +1,3 @@
-<iframe src="${video.url}?html5=1"></iframe>
+<div class="video">
+    <iframe width="300" height="200" src="${video.url}" frameborder="0" allowfullscreen="true"/>
+</div>
