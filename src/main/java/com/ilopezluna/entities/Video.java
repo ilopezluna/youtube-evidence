@@ -27,4 +27,9 @@ public class Video {
     public String street;
 
     public String email;
+
+    @Override
+    public String toString() {
+        return "id: " + id + " url: " + url + " date: " + date + " city: " + city + " street: " + street + " email: " + email;
+    }
 }

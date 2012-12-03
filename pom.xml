@@ -84,6 +84,12 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             <version>${tapestry-jquery-version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>${javax.mail.version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>youtube-evidence</finalName>
@@ -185,5 +191,6 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         <easymock-release-version>3.0</easymock-release-version>
         <mysql-connector-version>5.1.21</mysql-connector-version>
         <tapestry-jquery-version>3.3.4</tapestry-jquery-version>
+        <javax.mail.version>1.4</javax.mail.version>
     </properties>
 </project>
