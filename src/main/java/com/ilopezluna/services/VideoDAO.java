@@ -23,7 +23,4 @@ public interface VideoDAO {
     void delete(Video video);
 
     Video getVideo(String hash);
-
-    @CommitAfter
-    void validateVideo(Video video);
 }

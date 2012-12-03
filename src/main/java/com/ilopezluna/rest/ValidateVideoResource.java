@@ -2,6 +2,7 @@ package com.ilopezluna.rest;
 
 import com.ilopezluna.entities.Video;
 import com.ilopezluna.services.VideoDAO;
+import com.ilopezluna.services.VideoService;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -12,9 +13,11 @@ import javax.ws.rs.core.Response;
 public class ValidateVideoResource {
 
     private final VideoDAO videoDAO;
+    private final VideoService videoService;
 
-    public ValidateVideoResource(VideoDAO videoDAO) {
+    public ValidateVideoResource(VideoDAO videoDAO, VideoService videoService) {
         this.videoDAO = videoDAO;
+        this.videoService = videoService;
     }
 
     @Path("/status")
@@ -27,7 +30,7 @@ public class ValidateVideoResource {
     @Path("{hash}")
     public Response validateVideo(@PathParam("hash") String hash) {
         Video video = videoDAO.getVideo(hash);
-        videoDAO.validateVideo(video);
+        videoService.validate(video);
         return Response.ok().build();
     }
 }

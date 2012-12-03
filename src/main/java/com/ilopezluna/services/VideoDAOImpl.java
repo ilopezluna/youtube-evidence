@@ -37,11 +37,4 @@ public class VideoDAOImpl implements VideoDAO
     public Video getVideo(String hash) {
         return (Video) session.createCriteria(Video.class).add(Restrictions.eq("hash", hash)).uniqueResult();
     }
-
-    public void validateVideo(Video video) {
-        video.setValidated(true);
-        session.save(video);
-    }
-
-
 }
