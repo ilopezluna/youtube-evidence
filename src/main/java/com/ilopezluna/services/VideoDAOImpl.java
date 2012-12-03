@@ -3,6 +3,7 @@ package com.ilopezluna.services;
 import com.ilopezluna.entities.Video;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.Collection;
 import java.util.Date;
@@ -18,10 +19,10 @@ public class VideoDAOImpl implements VideoDAO
     }
 
     public List<Video> getVideos() {
-        return session.createCriteria(Video.class).list();
+        return session.createCriteria(Video.class).add(Restrictions.eq("validated", true)).list();
     }
 
-    public void add(Video newVideo) {
+    public void save(Video newVideo) {
         session.save(newVideo);
     }
 
@@ -32,4 +33,15 @@ public class VideoDAOImpl implements VideoDAO
     public void delete(Video video) {
         //To change body of implemented methods use File | Settings | File Templates.
     }
+
+    public Video getVideo(String hash) {
+        return (Video) session.createCriteria(Video.class).add(Restrictions.eq("hash", hash)).uniqueResult();
+    }
+
+    public void validateVideo(Video video) {
+        video.setValidated(true);
+        session.save(video);
+    }
+
+
 }

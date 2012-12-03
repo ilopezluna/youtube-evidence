@@ -27,6 +27,7 @@ public class AppModule
     public static void bind(ServiceBinder binder)
     {
         binder.bind(VideoDAO.class);
+        binder.bind(VideoService.class);
     }
 
     public static void contributeFactoryDefaults(

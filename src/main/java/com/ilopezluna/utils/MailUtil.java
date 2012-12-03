@@ -1,5 +1,7 @@
 package com.ilopezluna.utils;
 
+import com.ilopezluna.entities.Video;
+
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;

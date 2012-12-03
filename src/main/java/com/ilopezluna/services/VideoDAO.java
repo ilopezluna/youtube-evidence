@@ -14,11 +14,16 @@ public interface VideoDAO {
     List<Video> getVideos();
 
     @CommitAfter
-    void add(Video newVideo);
+    void save(Video newVideo);
 
     @CommitAfter
     void update(Video video);
 
     @CommitAfter
     void delete(Video video);
+
+    Video getVideo(String hash);
+
+    @CommitAfter
+    void validateVideo(Video video);
 }

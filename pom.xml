@@ -87,7 +87,13 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
-            <version>${javax.mail.version}</version>
+            <version>${javax-mail-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.tynamo</groupId>
+            <artifactId>tapestry-resteasy</artifactId>
+            <version>${tapestry-resteasy-version}</version>
         </dependency>
 
     </dependencies>
@@ -191,6 +197,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         <easymock-release-version>3.0</easymock-release-version>
         <mysql-connector-version>5.1.21</mysql-connector-version>
         <tapestry-jquery-version>3.3.4</tapestry-jquery-version>
-        <javax.mail.version>1.4</javax.mail.version>
+        <javax-mail-version>1.4</javax-mail-version>
+        <tapestry-resteasy-version>0.3.0</tapestry-resteasy-version>
     </properties>
 </project>
