@@ -111,14 +111,13 @@ public class Video {
 
     @Override
     public String toString() {
-        return "id: "
-                + id + " url: "
-                + url + " date: "
-                + date + " city: "
-                + city + " street: "
-                + street + " email: "
-                + email + " timestamp: "
-                + timestamp
-                + "Validation URL: http://localhost:8080/youtube-evidence/rest/validate/video/" + hash;
+        return "id: " + id
+                + " url: " + url
+                + " date: " + date
+                + " city: " + city
+                + " street: " + street
+                + " email: " + email
+                + " timestamp: " + timestamp
+                + " Validation URL: http://localhost:8080/youtube-evidence/rest/validate/video/" + hash;
     }
 }

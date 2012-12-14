@@ -14,9 +14,9 @@ public class VideoServiceImpl implements VideoService {
 
     public void create(Video video) {
         try {
+            video.setTimestamp(new Date());
             String hash = HashUtil.makeSHA1Hash(video.toString());
             video.setHash(hash);
-            video.setTimestamp(new Date());
             videoDAO.save(video);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
