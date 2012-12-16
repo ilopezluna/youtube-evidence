@@ -5,7 +5,7 @@
     <div class="kapbox">
         <form t:type="Form" t:id="createVideo">
 
-            <t:textfield t:id="url" value="video.url"/>
+            <t:textfield t:id="url" value="video.url" validate="required,regexp"/>
             <br/>
             <t:datefield t:id="date" value="video.date"/>
 
