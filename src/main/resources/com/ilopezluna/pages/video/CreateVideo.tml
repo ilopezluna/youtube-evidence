@@ -5,9 +5,13 @@
     <div class="kapbox">
         <form t:type="Form" t:id="createVideo">
 
-            <t:textfield t:id="url" value="video.url" validate="required,regexp"/>
+            <t:label for="url" />
+            <t:textfield t:id="url"  label="URL: " value="video.url" validate="required,regexp"/>
+
             <br/>
-            <t:datefield t:id="date" value="video.date"/>
+
+            <t:label for="date"/>
+            <t:datefield t:id="date" label="Date: " value="video.date"/>
 
             <div class="kap">
                 <t:KaptchaImage t:id="kaptchaImage"/>
