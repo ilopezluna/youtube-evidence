@@ -1,5 +1,4 @@
 <html t:type="layout" title="youtube-evidence Index"
-      t:sidebarTitle="Framework Version"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
@@ -10,18 +9,5 @@
 
     <p><t:pagelink page="video/createvideo">Create video</t:pagelink></p>
     <p><t:pagelink page="video/listvideo">List videos</t:pagelink></p>
-
-    <p:sidebar>
-        <p>
-            You are running Tapestry version <strong>${tapestryVersion}</strong>.
-        </p>
-
-
-        <p>
-            [
-            <t:pagelink page="Index">refresh page</t:pagelink>
-            ]
-        </p>
-    </p:sidebar>
 
 </html>

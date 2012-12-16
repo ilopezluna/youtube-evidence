@@ -1,6 +1,28 @@
 <html t:type="layout" title="Create New Video"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
-<t:beaneditform object="video"/>
+<div class="eg">
+    <div class="kapbox">
+        <form t:type="Form" t:id="createVideo">
+
+            <t:textfield t:id="url" value="video.url"/>
+            <br/>
+            <t:datefield t:id="date" value="video.date"/>
+
+            <div class="kap">
+                <t:KaptchaImage t:id="kaptchaImage"/>
+            </div>
+            <div class="kap">
+                What characters are shown in the box above?
+            </div>
+            <div class="kap">
+                <t:KaptchaField t:image="kaptchaImage" visible="true" label="characters"/>
+            </div>
+            <div class="kap">
+                <input type="submit"/>
+            </div>
+        </form>
+    </div>
+</div>
 
 </html>
