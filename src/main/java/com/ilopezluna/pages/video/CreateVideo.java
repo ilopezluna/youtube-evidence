@@ -35,6 +35,15 @@ public class CreateVideo {
     @Component(id = "date")
     private DateField dateField;
 
+    @Component(id = "email")
+    private TextField emailField;
+
+    @Component(id = "city")
+    private TextField cityField;
+
+    @Component(id = "street")
+    private TextField streetField;
+
     @Property
     private Video video;
 

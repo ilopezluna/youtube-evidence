@@ -2,16 +2,33 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
 <div class="eg">
-    <div class="kapbox">
-        <form t:type="Form" t:id="createVideo">
+        <form t:type="Form" t:id="createVideo" class="create-video">
 
-            <t:label for="url" />
-            <t:textfield t:id="url"  label="URL: " value="video.url" validate="required"/>
+            <div class="field">
+                <t:label for="url" />
+                <t:textfield t:id="url"  label="url" value="video.url" validate="required"/>
+            </div>
 
-            <br/>
+            <div class="field">
+                <t:label for="date"/>
+                <t:datefield t:id="date" label="date" value="video.date"/>
+            </div>
 
-            <t:label for="date"/>
-            <t:datefield t:id="date" label="Date: " value="video.date"/>
+            <div class="field">
+                <t:label for="email" />
+                <t:textfield t:id="email"  label="email" value="video.email"/>
+            </div>
+
+            <div class="field">
+                <t:label for="city" />
+                <t:textfield t:id="city"  label="city" value="video.city"/>
+            </div>
+
+            <div class="field">
+                <t:label for="street" />
+                <t:textfield t:id="street"  label="street" value="video.street"/>
+            </div>
+
 
             <div class="kap">
                 <t:KaptchaImage t:id="kaptchaImage"/>
@@ -27,6 +44,5 @@
             </div>
         </form>
     </div>
-</div>
 
 </html>

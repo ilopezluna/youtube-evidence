@@ -1,3 +1,28 @@
 .video-list {
     list-style: none;
 }
+
+.create-video {
+     width: 400px;
+}
+
+.field {
+    float: left;
+}
+
+.field input {
+    margin: 5px;
+    width: 188px;
+}
+
+.field label, .field input {
+    display: inline-block;
+}
+
+.field label {
+    width: 50px;
+}
+
+.kaptcha-image {
+    margin-left: 40px;
+}
