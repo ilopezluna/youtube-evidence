@@ -16,17 +16,5 @@ import org.hibernate.Session;
  */
 public class Index
 {
-    @Property
-    @Inject
-    @Symbol(SymbolConstants.TAPESTRY_VERSION)
-    private String tapestryVersion;
-
-    @Inject
-    private AlertManager alertManager;
-
-    public Date getCurrentTime()
-    {
-        return new Date();
-    }
 
 }
