@@ -6,7 +6,7 @@
         <form t:type="Form" t:id="createVideo">
 
             <t:label for="url" />
-            <t:textfield t:id="url"  label="URL: " value="video.url" validate="required,regexp"/>
+            <t:textfield t:id="url"  label="URL: " value="video.url" validate="required"/>
 
             <br/>
 

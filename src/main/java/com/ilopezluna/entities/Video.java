@@ -20,6 +20,8 @@ public class Video {
     @Validate("required")
     private String url;
 
+    private String videoId;
+
     private Date date;
 
     private String city;
@@ -107,6 +109,15 @@ public class Video {
 
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
+    }
+
+    @NonVisual
+    public String getVideoId() {
+        return videoId;
+    }
+
+    public void setVideoId(String videoId) {
+        this.videoId = videoId;
     }
 
     @Override
