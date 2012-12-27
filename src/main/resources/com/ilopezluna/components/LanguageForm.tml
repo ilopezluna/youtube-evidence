@@ -1,0 +1,7 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+    <div class="language">
+        <a t:type="ActionLink" t:id="catLocaleLink" href="#">Català</a><br/>
+        <a t:type="ActionLink" t:id="esLocaleLink" href="#">Castellano</a><br/>
+        <a t:type="ActionLink" t:id="enLocaleLink" href="#">English</a><br/>
+    </div>
+</t:container>

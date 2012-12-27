@@ -26,3 +26,7 @@
 .kaptcha-image {
     margin-left: 40px;
 }
+
+.language {
+    float: right;
+}

@@ -1,7 +1,7 @@
 <html t:type="layout" title="Create New Video"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 
-<div class="eg">
+    <div class="eg">
         <form t:type="Form" t:id="createVideo" class="create-video">
 
             <div class="field">

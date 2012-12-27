@@ -62,6 +62,7 @@ Description: A Web 2.0 design with fluid width suitable for blogs and small webs
                     <div class="title">
                         <h2>${title}</h2>
                     </div>
+                    <t:languageform/>
                     <div class="entry">
                         <t:body/>
                     </div>

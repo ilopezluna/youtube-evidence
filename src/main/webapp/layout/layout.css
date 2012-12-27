@@ -157,6 +157,8 @@ div.content {
 .post .title {
     border-bottom: 1px #999999 dashed;
     font-family: Tahoma, Georgia, "Times New Roman", Times, serif;
+    float : left;
+    margin-bottom: 10px;
 }
 
 .post .title h2 {
