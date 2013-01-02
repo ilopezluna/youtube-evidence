@@ -209,6 +209,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
     </pluginRepositories>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hibernate.connection.url.host>localhost</hibernate.connection.url.host>
         <hibernate.connection.url.databasename>youtube-evidence</hibernate.connection.url.databasename>
         <tapestry-release-version>5.3.6</tapestry-release-version>

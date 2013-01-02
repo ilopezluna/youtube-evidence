@@ -3,7 +3,7 @@
       xmlns:p="tapestry:parameter">
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
-    <p><t:pagelink page="video/createvideo">Create video</t:pagelink></p>
-    <p><t:pagelink page="video/listvideo">List videos</t:pagelink></p>
+    <p><t:pagelink page="video/createvideo">${message:index-create-video}</t:pagelink></p>
+    <p><t:pagelink page="video/listvideo">${message:index-list-video}</t:pagelink></p>
 
 </html>
