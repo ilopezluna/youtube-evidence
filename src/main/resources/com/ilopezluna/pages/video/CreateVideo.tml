@@ -6,27 +6,27 @@
 
             <div class="field">
                 <t:label for="url" />
-                <t:textfield t:id="url"  label="url" value="video.url" validate="required"/>
+                <t:textfield t:id="url"  label="${message:create-video-url}" value="video.url" validate="required"/>
             </div>
 
             <div class="field">
                 <t:label for="date"/>
-                <t:datefield t:id="date" label="date" value="video.date"/>
+                <t:datefield t:id="date" label="${message:create-video-date}" value="video.date"/>
             </div>
 
             <div class="field">
                 <t:label for="email" />
-                <t:textfield t:id="email"  label="email" value="video.email"/>
+                <t:textfield t:id="email"  label="${message:create-video-mail}" value="video.email"/>
             </div>
 
             <div class="field">
                 <t:label for="city" />
-                <t:textfield t:id="city"  label="city" value="video.city"/>
+                <t:textfield t:id="city"  label="${message:create-video-city}" value="video.city"/>
             </div>
 
             <div class="field">
                 <t:label for="street" />
-                <t:textfield t:id="street"  label="street" value="video.street"/>
+                <t:textfield t:id="street"  label="${message:create-video-street}" value="video.street"/>
             </div>
 
 
@@ -40,7 +40,7 @@
                 <t:KaptchaField t:image="kaptchaImage" visible="true" label="characters"/>
             </div>
             <div class="kap">
-                <input type="submit"/>
+                <input type="submit" title="${message:create-video-send}"/>
             </div>
         </form>
     </div>
